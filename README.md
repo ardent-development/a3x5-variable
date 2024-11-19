@@ -10,7 +10,7 @@ This font is designed for use in situations where text must be displayed in a gr
  * No ascenders or descenders: all characters fit between baseline and x-height
  * No intentionally decorative features
  * Character Size:
-   * Width: 3 - 5 pixels, depending on complexity
+   * Width: 3 - 5 pixels, depending on character complexity
    * Height: 5 pixels
 
 ## Character Set
@@ -30,17 +30,19 @@ Take a look at [TODO.md](./TODO.md) for details.
 
 ### Handling of invisible control codes
 
-The control code letters (BEL, NUL, etc.) are too big to fit within the 5x5 canvas space. So, control characters are expressed as such:
-![The codes are represented as a 4x4 grid of 16 bits with the MSB at the top left and LSB at the bottom right.](./_md_assets/markers.png "The codes are represented as a 4x4 grid of 16 bits with the MSB at the top left and LSB at the bottom right.")
+The control code indicators (BEL, NUL, etc.) are too big to fit within a 5×5 space. So, when control characters need to be displayed, they are expressed as such:
 
-* The red shaded area is always white.
-* The black shaded area is always black to signify that the character contains a control code.
-* The rest of the area will contain the 16 bits that denote which control code is represented.
+![The codes are represented as a 4×4 grid of 16 bits with the MSB at the top left and LSB at the bottom right.](./_md_assets/markers.png "The codes are represented as a 4×4 grid of 16 bits with the MSB at the top left and LSB at the bottom right.")
+
+* The red shaded area is always left white.
+* The black area is always black to signify that the character contains a control code.
+* The rest of the area will contain the 16 bits that denote which control code is represented. They are represented in big-endian order from top to bottom, left to right on each row.
   * The topmost row is bits 0~3, left to right
   * The row below the topmost is bits 4~7
   * The row above the lowest is bits 8~11
   * The bottom row is bits 12~15
 * The correspondence between each bit pattern and each control code is specified in [CONTROLCODES.md](./CONTROLCODES.md)
+* The extremely predictable nature of the control code characters makes it feasible to generate them at runtime. Therefore, the control code characters are not embedded in the font itself and will have to be rendered on the spot by the font renderer.
 
 ## Contributors
 
