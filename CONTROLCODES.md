@@ -35,7 +35,6 @@
 | `0000000000011110b` | ASCII Record Separator                         | RS           |
 | `0000000000011111b` | ASCII Unit Separator                           | US           |
 | `0000000001111111b` | ASCII Delete                                   | DEL          |
-| `0000000010000101b` | Unicode Next Line                              | NEL          |
 | `0000000010000000b` | ASCII Padding Character                        | PAD          |
 | `0000000010000001b` | ASCII High Octet Preset                        | HOP          |
 | `0000000010000010b` | ASCII Break Permitted Here                     | BPH          |
