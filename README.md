@@ -6,7 +6,7 @@ This font is designed for use in situations where text must be displayed in a gr
 
 ## Characteristics
 
- * Monospace
+ * Variable-width letters; monospace Arabic numerals
  * No ascenders or descenders: all characters fit between baseline and x-height
  * No intentionally decorative features
  * Character Size:
@@ -21,10 +21,10 @@ Since the available canvas space is so limited, we can only implement so many ch
 
 | Character Set              | Completeness |
 | -------------------------- | ------------ |
-| ASCII-7                    | 0/0 (0%)     |
-| ASCII-8                    | 0/0 (0%)     |
-| Greek letters              | 0/0 (0%)     |
-| Mathematical symbols       | 0/0 (0%)     |
+| ASCII-7                    | 100%         |
+| ASCII-8                    | 0%           |
+| Greek letters              | 0%           |
+| Mathematical symbols       | 0%           |
 
 Take a look at [TODO.md](./TODO.md) for details.
 

@@ -1,7 +1,7 @@
 # Control Codes
 
-| Binary Code         | Description                                                          | Abbreviation |
-|---------------------|----------------------------------------------------------------------|--------------|
+| Binary Code         | Description                                    | Abbreviation |
+|---------------------|------------------------------------------------|--------------|
 | `0000000000000000b` | ASCII Null                                     | NUL          |
 | `0000000000000001b` | ASCII Start of Header                          | SOH          |
 | `0000000000000010b` | ASCII Start of Text                            | STX          |
